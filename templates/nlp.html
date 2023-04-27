@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+
+    <div style="margin-left: 150px; margin-top: 100px; width: 900px;">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Gene List</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Gene Expression</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">File Upload</button>
+        </li>
+      </ul>
+
+
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+        <!-- This section Insert data for Gene List -->
+        <h6 style="color: grey; margin-top: 2%;">Identify which pathways, annotated-lists, and gene signatures (PAG) in the database are sigificantly related to the following input gene list ("query genes")</h6>
+
+        <div class="card" style="background-color: #f2f2f2; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); padding: 20px;">
+           <h6>Basic Parameters</h6>
+         </div>
+         <form method="post" action="/" enctype="multipart/form-data " style="margin-top:2%">
+             <label for="up_genes" style="margin-right:30px">Up-regulated genes:</label>
+             <input type="text" id="up_genes" name="up_genes" style="height:85px;width:600px"><br><br>
+
+             <label for="down_genes" style="margin-right:10px">Down-regulated genes:</label>
+             <input type="text" id="down_genes" name="down_genes"  style="height:85px;width:600px"><br><br>
+
+        <!--      <input type="submit" value="Submit">-->
+             <button type="submit" class="btn btn-primary" style="margin-top: 40px; margin-left:50%">Analyze</button>
+         </form>
+   </div>
+
+
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+         <!-- This is the Second tab that is used for Gene Expression data -->
+         <h6 style="color: grey; margin-top: 2%;">Identify which pathways, annotated-lists, and gene signatures (PAG) in the database are sigificantly related to the following input gene list ("query genes")</h6>
+
+         <div class="card" style="background-color: #f2f2f2; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); padding: 20px;">
+            <h6>Basic Parameters</h6>
+          </div>
+
+         <form>
+
+            <div class="form-group" style="margin-top: 4%; ">
+              <label for="exampleFormControlTextarea1">Enter your Genes List</label>
+
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="8" placeholder="Insert the name with ',' comma seperated" style="margin-top: 30px;"></textarea>
+            </div>
+          </form>
+
+          <button type="submit" class="btn btn-primary" style="margin-top: 40px;">Analyze</button>
+
+        </div>
+
+<!--       from here -->
+
+
+
+
+
+
+<!--          end here -->
+        <!-- From here the File upload tab starts -->
+        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+            <h6 style="color: grey; margin-top: 5%;">Identify which pathways, annotated-lists, and gene signatures (PAG) in the database are sigificantly related to the following input gene list ("query genes")</h6>
+
+            <!-- here wrapping the form in card body -->
+            <table>
+                <tr>
+                  <td>Please upload a tab separated file</td>
+                  <td style="padding-left: 5%;"><input type="file" name="file1"></td>
+                </tr>
+                <tr>
+                  <td>The "gene symbol" column</td>
+                  <td><input type="file" name="file2"></td>
+                </tr>
+                <tr>
+                  <td>wait for upload file</td>
+                  <td><input type="file" name="file3"></td>
+                </tr>
+                <tr>
+                  <td>The "fold change" column</td>
+                  <td><input type="file" name="file4"></td>
+                </tr>
+                <tr>
+                  <td>wait for upload file</td>
+                  <td><input type="file" name="file5"></td>
+                </tr>
+
+              </table>
+
+
+
+
+
+            </div>
+      </div>
+
+    </div>
+
+
+
+
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
